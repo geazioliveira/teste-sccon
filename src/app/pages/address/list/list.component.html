@@ -1,0 +1,41 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+  <!--   -->
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="cep">
+    <th mat-sort-header="cep" mat-header-cell *matHeaderCellDef> CEP.</th>
+    <td mat-cell *matCellDef="let element"> {{element.cep}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="logradouro">
+    <th mat-sort-header="logradouro" mat-header-cell *matHeaderCellDef> Endereço</th>
+    <td mat-cell *matCellDef="let element"> {{element.getAddress()}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="createdAt">
+    <th mat-header-cell *matHeaderCellDef> Data</th>
+    <td mat-cell *matCellDef="let element"> {{element.createdAt.format('DD/MM/YYYY - HH:mm')}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-mini-fab aria-label="Excluir endereço" (click)="delete(element)" class="custom-buttom">
+        <mat-icon>close</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSize]="10" [pageSizeOptions]="[10, 15, 20]"></mat-paginator>
+

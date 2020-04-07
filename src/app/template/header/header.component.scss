@@ -1,0 +1,28 @@
+// Imports
+
+@import "../../../assets/base";
+@import "../../../assets/colors";
+
+header {
+  position: relative;
+  width: 100%;
+  height: $header-height;
+  //background: $bg-second-color;
+  border-bottom: 5px solid $bg-second-color;
+
+  #logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    left: 0;
+    top: calc((#{$header-height} - 105px) / 2);
+
+    .image {
+      width: 100%;
+    }
+  }
+
+
+
+}

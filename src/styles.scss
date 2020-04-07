@@ -1,0 +1,38 @@
+@import "assets/importer";
+
+html, body {
+  height: 100%;
+  background: $bg-primary-color;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.container {
+  position: relative;
+  width: $base-width;
+  margin: 0 auto;
+}
+
+.clear {
+  clear: both;
+}
+
+section.title {
+  background: $bg-complement-second;
+  color: $button-primary-color;
+  margin-bottom: 30px;
+
+  .header {
+    padding: 30px;
+
+    hr {
+      border: 1px dotted #2F2F2E;
+    }
+  }
+}
+
+.right {float: right}

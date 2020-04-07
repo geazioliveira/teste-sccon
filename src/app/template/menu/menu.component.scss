@@ -1,0 +1,66 @@
+@import "../../../assets/importer";
+
+// Menu
+nav {
+  position: absolute;
+  background: #fff;
+  top: 20px;
+  right: 0;
+  width: 40%;
+  z-index: 9;
+
+  .nav-bar-horizontal {
+
+    .navigation {
+
+      .nav-item {
+        position: relative;
+        width: 50%;
+        float: left;
+        text-align: center;
+
+        a {
+          display: block;
+          background: $bg-second-color;
+          color: $bg-primary-color;
+          padding: 30px 0;
+
+          span {
+            -webkit-box-flex: 1;
+            flex: 1 1 auto;
+            white-space: nowrap;
+          }
+
+          &:hover {
+            background: darken($bg-second-color, 6%);
+          }
+        }
+
+        .children {
+          display: none;
+        }
+
+        &.active .children {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .nav-bar-vertical {
+    position: absolute;
+    width: 100%;
+
+    .nav-item {
+      width: 100% !important;
+      a {
+        background: darken($bg-second-color, 6%) !important;
+
+        &:hover {
+          background: darken($bg-second-color, 15%) !important;
+        }
+      }
+    }
+  }
+
+}

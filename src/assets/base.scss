@@ -1,0 +1,19 @@
+// Body
+$base-width: 980px;
+
+// Header
+$header-height: 125px;
+
+
+.nav-link {
+  text-decoration: none !important;
+  padding: 0 24px;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  color: #000000;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+}
